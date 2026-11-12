@@ -1,20 +1,20 @@
 # Daily rewards
 
-Серверная часть ежедневных наград и промокодов плюс простое окно для проверки. Профиль игрока (Coins, LastClaimTime, Streak, UsedCodes) лежит в DataStore, награда выдаётся раз в 24 часа, после 48 часов простоя стрик сбрасывается на первый день. Если плейс не опубликован и DataStore недоступен, DataManager переключается на хранение в памяти, так что систему можно гонять в Studio без публикации.
+Server side daily rewards and promo codes with a small test window. The player profile (Coins, LastClaimTime, Streak, UsedCodes) lives in DataStore, the reward is available once per 24 hours, and the streak drops back to day 1 after 48 hours offline. When the place is not published and DataStore is unavailable, DataManager keeps profiles in memory so the system still runs in Studio.
 
-## Установка
+## Install
 
-Готовые файлы лежат в [Releases](https://github.com/N0ctisL0ve/daily-rewards/releases/latest): пять `.rbxm` и архив с исходниками. Скачанные `.rbxm` перетаскиваются в Explorer по адресам:
+Prebuilt files are attached to the [latest release](https://github.com/N0ctisL0ve/daily-rewards/releases/latest): five `.rbxm` models plus the source archives. Drop the models into Explorer:
 
 ```
 Config.rbxm, Remotes.rbxm             -> ReplicatedStorage
 DataManager.rbxm, RewardsService.rbxm -> ServerScriptService
-RewardsUI.rbxm                        -> StarterPlayer.StarterPlayerScripts
+RewardsUI.rbxm                        -> StarterPlayer/StarterPlayerScripts
 ```
 
-Через Rojo: `rojo serve` в корне репозитория и подключение одноимённого плагина в Studio. Папку Remotes можно не создавать вручную, RewardsService сделает её сам.
+With Rojo, run `rojo serve` in the repo root and connect the Rojo plugin in Studio. The Remotes folder is created by RewardsService on start, so it does not need to be built by hand.
 
-## Раскладка в Studio
+## Studio layout
 
 ```
 ReplicatedStorage
@@ -31,6 +31,6 @@ StarterPlayer
     RewardsUI       LocalScript
 ```
 
-Тестовые коды в Config: FREE100 (+100) и WEEK7 (+700), OLDCODE выключен для проверки отказа.
+Test codes in Config: FREE100 (+100) and WEEK7 (+700). OLDCODE is disabled on purpose to check the rejection path.
 
-![Окно наград и промокодов](docs/ui.png)
+![Rewards window](docs/ui.png)

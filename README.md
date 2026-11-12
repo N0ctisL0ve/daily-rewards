@@ -34,3 +34,5 @@ StarterPlayer
 Test codes in Config: FREE100 (+100) and WEEK7 (+700). OLDCODE is disabled on purpose to check the rejection path.
 
 ![Rewards window](docs/ui.png)
+
+MIT, see [LICENSE](LICENSE).

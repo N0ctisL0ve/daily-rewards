@@ -1,0 +1,33 @@
+{
+  "name": "daily-rewards",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Config": {
+        "$path": "src/ReplicatedStorage/Config.luau"
+      },
+      "Remotes": {
+        "$className": "Folder"
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "DataManager": {
+        "$path": "src/ServerScriptService/DataManager.luau"
+      },
+      "RewardsService": {
+        "$path": "src/ServerScriptService/RewardsService.server.luau"
+      }
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "RewardsUI": {
+          "$path": "src/StarterPlayer/StarterPlayerScripts/RewardsUI.client.luau"
+        }
+      }
+    }
+  }
+}

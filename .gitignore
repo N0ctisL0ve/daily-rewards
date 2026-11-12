@@ -1,0 +1,10 @@
+.env
+.env.*
+opencode.json
+*.rbxl.lock
+*.rbxlx.lock
+*.rbxl.bak
+*.rbxlx.bak
+*.log
+node_modules/
+sourcemap.json
